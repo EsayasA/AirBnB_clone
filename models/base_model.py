@@ -1,19 +1,19 @@
 #!/usr/bin/python3
-"""This is base model class."""
+"""Defines the BaseModel class."""
 import models
 from uuid import uuid4
 from datetime import datetime
 
 
 class BaseModel:
-    """Defines basemodel class."""
+    """Represents the BaseModel of the HBnB project."""
 
     def __init__(self, *args, **kwargs):
-        """Init as this function.
+        """Initialize a new BaseModel.
 
         Args:
-            *args (any): arguments.
-            **kwargs (dict): key arguments with value.
+            *args (any): Unused.
+            **kwargs (dict): Key/value pairs of attributes.
         """
         tform = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid4())
@@ -29,14 +29,15 @@ class BaseModel:
             models.storage.new(self)
 
     def save(self):
-        """Updates the public instance attribute updated_at with the current datetime."""
+        """Update updated_at with the current datetime."""
         self.updated_at = datetime.today()
         models.storage.save()
 
     def to_dict(self):
-        """returns a dictionary containing all keys/values of __dict__ of the instance.
+        """Return the dictionary of the BaseModel instance.
 
-        with including class name.
+        Includes the key/value pair __class__ representing
+        the class name of the object.
         """
         rdict = self.__dict__.copy()
         rdict["created_at"] = self.created_at.isoformat()
@@ -45,6 +46,6 @@ class BaseModel:
         return rdict
 
     def __str__(self):
-        """Return print of the str of instance of basemodel."""
+        """Return the print/str representation of the BaseModel instance."""
         clname = self.__class__.__name__
         return "[{}] ({}) {}".format(clname, self.id, self.__dict__)
