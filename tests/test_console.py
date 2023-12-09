@@ -1,6 +1,5 @@
-test_console.py
 #!/usr/bin/python3
-"""Defines unittests for console.py.
+"""explaines unittests for console.py.
 
 Unittest classes:
     TestHBNBCommand_prompting
@@ -12,8 +11,8 @@ Unittest classes:
     TestHBNBCommand_destroy
     TestHBNBCommand_update
 """
-import os
 import sys
+import os
 import unittest
 from models import storage
 from models.engine.file_storage import FileStorage
@@ -23,7 +22,7 @@ from unittest.mock import patch
 
 
 class TestHBNBCommand_prompting(unittest.TestCase):
-    """Unittests for testing prompting of the HBNB command interpreter."""
+    """Unittests to test for prompting"""
 
     def test_prompt_string(self):
         self.assertEqual("(hbnb) ", HBNBCommand.prompt)
@@ -35,10 +34,10 @@ class TestHBNBCommand_prompting(unittest.TestCase):
 
 
 class TestHBNBCommand_help(unittest.TestCase):
-    """Unittests for testing help messages of the HBNB command interpreter."""
+    """Unittests to test help command."""
 
     def test_help_quit(self):
-        h = "Quit command to exit the program."
+        h = "Quit as command to exit the program."
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("help quit"))
             self.assertEqual(h, output.getvalue().strip())
