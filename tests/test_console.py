@@ -2,12 +2,12 @@
 """explaines unittests for console.py.
 
 Unittest classes:
-    TestHBNBCommand_prompting
-    TestHBNBCommand_help
+    TestHBNBCommand_prompt
     TestHBNBCommand_exit
+    TestHBNBCommand_help
     TestHBNBCommand_create
-    TestHBNBCommand_show
     TestHBNBCommand_all
+    TestHBNBCommand_show
     TestHBNBCommand_destroy
     TestHBNBCommand_update
 """
@@ -21,10 +21,10 @@ from io import StringIO
 from unittest.mock import patch
 
 
-class TestHBNBCommand_prompting(unittest.TestCase):
+class TestHBNBCommand_prompt(unittest.TestCase):
     """Unittests to test for prompting"""
 
-    def test_prompt_string(self):
+    def test_prompt_str(self):
         self.assertEqual("(hbnb) ", HBNBCommand.prompt)
 
     def test_empty_line(self):
