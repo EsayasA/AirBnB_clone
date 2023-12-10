@@ -22,7 +22,7 @@ class BaseModel:
         if len(kwargs) != 0:
             for ke, va in kwargs.items():
                 if ke == "created_at" or ke == "updated_at":
-                    self.__dict__[k] = datetime.strptime(va, formm)
+                    self.__dict__[ke] = datetime.strptime(va, formm)
                 else:
                     self.__dict__[ke] = va
         else:
