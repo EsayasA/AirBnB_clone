@@ -7,8 +7,8 @@ class Review(BaseModel):
     """Class of review.
 
     Attributes:
-        place_id (str): Place id.
-        user_id (str): User id.
+        place_id (str): id of the place.
+        user_id (str): id of the user.
         text (str): text string.
     """
 

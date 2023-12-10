@@ -7,7 +7,7 @@ class Amenity(BaseModel):
     """Represent an amenity.
 
     Attributes:
-        name (str): name with string.
+        name (str): name.
     """
 
     name = ""

@@ -7,7 +7,7 @@ class State(BaseModel):
     """Define a state.
 
     Attributes:
-        name (str): state name.
+        name (str): name of the state.
     """
 
     name = ""

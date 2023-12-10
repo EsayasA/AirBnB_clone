@@ -40,10 +40,10 @@ class FileStorage:
         """Deserialize the JSON file __file_path to __objects, if it exists otherwise do nothing."""
         try:
             with open(FileStorage.__file_path) as f:
-                objdic = json.load(f)
-                for o in objdic.values():
-                    cls_name = o["__class__"]
+                odic = json.load(f)
+                for o in odic.values():
+                    c_n = o["__class__"]
                     del o["__class__"]
-                    self.new(eval(cls_name)(**o))
+                    self.new(eval(c_n)(**o))
         except FileNotFoundError:
             return
