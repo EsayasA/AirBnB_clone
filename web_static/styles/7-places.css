@@ -1,0 +1,37 @@
+
+.places-container > h1{
+font-size: 30px;
+width: 100%;
+padding: 0;
+margin-bottom: 0;
+}
+.places-container{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.places-container > article{
+	width: 390px;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 4px;	
+}
+.places-container > article > h2{
+	font-size: 30px;
+	text-align: center;
+	margin: 0;
+	padding: 0;	
+}
+.places-container > .one, .places-container > .two{
+	border-bottom: 1px solid #FF5A5F;
+	border-top: 1px solid #FF5A5F;
+	border-right: 1px dotted #FF5A5F;
+	border-left: 1px dotted #FF5A5F;
+}
+.places-container > .three
+{
+	border-right: 1px dotted #FF5A5F;
+	border-left: 1px dotted #FF5A5F;
+
+}
